@@ -79,6 +79,7 @@ $(function () {
             $('.note_ani').css('backgroundColor', 'red').css('width', '50%')
         })
     })
+
     function publish() {
         //发布数据
         let w_d = $('.water').val()
@@ -98,7 +99,7 @@ $(function () {
             $('.post_data').html('已发送').css('color', 'red')
         });
     }
-    let msg, T, H, w_d=['?','?','?','?','?']
+    let msg, T, H, w_d = ['?', '?', '?', '?', '?']
     //接收到消息触发的回调函数
     client.on('message', (topic, message, packet) => {
         // var msg=JSON.parse(message.toString())
@@ -107,10 +108,13 @@ $(function () {
             msg = message.toString()
             console.log(msg);
             if (message.toString() === 'ON') {
+                console.log('ON');
                 $('.light_ani').css('width', '50%').css('backgroundColor', 'yellow')
                 $('.light_modle').css('color', 'yellow')
                 $('.light_modle').html('&#xe6db;')
-            } else {
+            } 
+            if (message.toString() === 'OFF') {
+                console.log('OFF');
                 $('.light_ani').css('width', '10%').css('backgroundColor', '#333')
                 $('.light_modle').css('color', '#000')
                 $('.light_modle').html('&#xe6b8;')
@@ -120,10 +124,10 @@ $(function () {
         if (topic === 'DHT11') {
             T = message.toString().replace('#', '').replace(';', ':').split(':')[1]
             H = message.toString().replace('#', '').replace(';', ':').split(':')[3]
-            while (T[0] === '0'&&T!=='0') {
+            while (T[0] === '0' && T !== '0') {
                 T = T.replace(T[0], '')
             }
-            while (H[0] === '0'&&H!=='0') {
+            while (H[0] === '0' && H !== '0') {
                 H = H.replace(H[0], '')
             }
             console.log('这是DHT11主题')
@@ -139,12 +143,12 @@ $(function () {
         }
         if (topic === 'Water') {
             w_d = message.toString().replace('#', '')
-            w_d=w_d.replace(';',':').split(':')
+            w_d = w_d.replace(';', ':').split(':')
             // w_d[1]=water w_d[3]=deg
-            while (w_d[1][0] === '0'&&w_d[1][0]!=='0') {
+            while (w_d[1][0] === '0' && w_d[1][0] !== '0') {
                 w_d[1] = w_d.replace(w_d[1][0], '')
             }
-            while (w_d[3][0] === '0'&&w_d[3][0]!=='0') {
+            while (w_d[3][0] === '0' && w_d[3][0] !== '0') {
                 w_d[3] = w_d.replace(w_d[3][0], '')
             }
             console.log('这是Water主题');
@@ -152,7 +156,7 @@ $(function () {
             $('.water_ani').css('width', w_d[1] / 35 + 10 + '%').css('background', 'rgb(16,140,' + w_d / 10 + 100 + ')')
             $('.water_data').html(w_d[1] + 'ml')
             $('.water_modle').css('color', 'rgb(10,10,' + w_d[1] / 6.5 + ')')
-            $('.deg_ani').css('width', w_d[3] / 35 + 10 + '%').css('background', 'rgb(16,140,' + w_d / 10 + 100 + ')')
+            $('.deg_ani').css('width', w_d[3]/3 + 30 + '%').css('background', 'rgb(16,140,' + w_d / 10 + 100 + ')')
             $('.deg_data').html(w_d[3] + '°')
             $('.deg_modle').css('color', 'rgb(20,20,20)')
         }
