@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #fff;
+    font-family: "iconfont" !important;
+    perspective: 312.5rem;
+    -webkit-text-size-adjust: 100%;
+    min-width: 1100px;
+}
+i{
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color: #555;
+}
+h3 {
+    font-weight: 400;
+}
+li {
+    list-style: none;
+}
+input {
+    text-indent: .3125rem;
+    display: inline-block;
+    border-radius: .125rem;
+    border: .125rem solid #000;
+    background-color: #eeffffee;
+    border: .125rem solid rgba(0,0,0,.5);
+    margin-left: 0rem;
+    vertical-align: bottom;
+}
+input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 .0625rem .0625rem rgba(0, 0, 0, .075), 0 0 .5rem rgba(102, 175, 233, 1);
+    box-shadow: inset 0 .0625rem .0625rem rgba(0, 0, 0, .075), 0 0 .5rem rgba(102, 175, 233, 1);
+}
+button {
+    text-indent: 0;
+    padding: 0rem 0rem;
+    width: 4.0625rem;
+    height: 2.1875rem;
+    font-size: 1rem;
+    cursor: pointer;
+    float: right;
+    margin-top: -0.3125rem;
+    margin-left: 5rem;
+    color: #fff;
+    border-radius: .3125rem;
+    background-color: #00C9C8;
+    border-color: #BFFCF9;
+}
+.header {
+    background: url(https://www.meijumi.net/wp-content/themes/2016091704541775/images/bj-6.jpg) no-repeat;
+    background-size:100% 100% ;
+    position: relative;
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    background-color: rgba(0,0,0,.3);
+    color: #eee;
+    font-size: 3.2rem;
+    text-align: center;
+    box-shadow: 0 0 .9375rem rgba(255, 255, 255, .7);
+}
+.header .tree {
+    float: left;
+    line-height: 6rem;
+    text-align: left;
+    padding-left: 6rem;
+    font-size: 4rem;
+    color: rgb(125, 255, 0);
+    cursor: pointer;
+}
+.header .tree i {
+    font-size: 1.1rem;
+    display: inline;
+    margin-left: 0.5rem;
+    color: #fefefe;
+}
+.header .group {
+    width: 60%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-left: -17rem;
+    letter-spacing: 0.35rem;
+}
+.nav {
+    width: 100%;
+    background-color: #FFE8F7;
+    height: 1.5rem;
+    position: relative;
+    border-top: 0.0625rem solid red;
+    background-image: linear-gradient(rgba(255,255,255,0.2),rgba(235, 210, 255, 0.3));
+}
+.nav span {
+    margin-right: 1.5rem;
+}
+.nav .remote_status .status {
+    color: #777;
+    font-size: 0.6rem;
+}
+.nav .remote_status{
+    position: absolute;
+    top: 0.2rem;
+    right: 4rem;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+}
+.time {
+    text-align: center;
+    background-color: #FFE8F7;
+    color: #555;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    padding-right: 16.2rem;
+    background-image: linear-gradient(rgba(255,200,255,0.2),rgba(255, 255, 255, 0.1));
+}
+.box {
+    width: 62rem;
+    margin: .9375rem auto;
+    height: 31.25rem;
+}
+.box .panel {
+    height: 3.2rem;
+    width: 100%;
+    background-color: rgb(31,155,203);
+    border-radius: .625rem;
+    color: #fefefe;
+    margin-top: 1.5625rem;
+    padding: .625rem 0rem;
+    float: left;
+    cursor: pointer;
+    transition: all 1s;
+}
+.box .panel1,
+.box .panel2 {
+    background-color: rgb(40,60,100);
+}
+.box .panel div {
+    font-size: 2.1875rem;
+    line-height: 3.125rem;
+    padding: 0rem 2.1875rem;
+}
+.form_submit {
+    float: left;
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: 2rem;
+    padding: 0rem .9375rem;
+}
+.form_submit i {
+    color: #555;
+    border: .125rem solid rgba(0,0,0,.5);
+    margin-top: -0.625rem;
+    margin-right: -0.09rem;
+    height: 1.57rem;
+    line-height: 1.57rem;
+    border-radius: .35rem 0 0 .35rem!important;
+    padding: .125rem .625rem;
+    display: inline-block;
+    font-weight: 500;
+    background-color: #feeeee;
+}
+.form_submit input {
+    border: .125rem solid rgba(0,0,0,.5);
+    background-color: #fff;
+    border-radius: 0 .25rem .25rem 0;
+    margin-left: 0rem;
+    margin-right: .9375rem;
+    vertical-align: bottom;
+    height: 1.82rem;
+    width: 5.625rem;
+    border-style: outset;
+    border-image: inherit;
+    writing-mode: horizontal-tb !important;
+}
+.form_submit .btn_submit {
+    border: 0.125rem solid rgba(0,0,0,.5);
+    text-indent: 0;
+    padding: 0rem 0rem;
+    width: 4rem;
+    height: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    float: right;
+    font-weight: 500;
+    text-shadow: 0 0 0rem rgba(0,0,0,.5);
+    margin-top: 0rem;
+    margin-left: 3.5rem;
+    color: #fff;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,.5);
+    border-radius: .3125rem;
+    background-color: rgb(27, 130, 171);
+    border-color: #2573d369;
+    transition: all 0.3s;
+}
+.showbox,
+.handle_record {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+.show {
+    margin-top: 0rem!important; 
+}
+.show_water,
+.show_tem,
+.show_hum,
+.show_light {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.6rem;
+}
+.show_water {
+    margin-top: 0.8rem;
+}
+.handle_record {
+    display: none;
+}
+.showbox .modle,
+.handle_record .modle {
+    box-sizing: content-box;
+    text-align: center;
+    border-left: .1875rem solid skyblue;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    width: 4.2rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-right: 0.1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 1.5s;
+}
+.showbox .modle:hover {
+    transform: translateY(-0.5rem);
+}
+.showbox .data{
+    margin-left: -0.5rem;
+    margin-right: 0rem;
+    padding-left: 0rem;
+    padding-right: 0.7rem;
+    width: 2.5rem;
+    font-size: 0.85rem;
+    height: 2.5rem;
+    box-sizing: content-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+.showbox .water_ani {
+    width: 5rem;
+    background-color: rgb(16,140,190);
+    transition: all 1.5s;
+}
+.showbox .tem_ani {
+    width: 15rem;
+    background-color: rgb(255, 0, 0);
+    transition: all 1.5s;
+}
+.showbox .hum_ani {
+    width: 22rem;
+    background-color: rgb(120, 210, 255);
+    transition: all 1.5s;
+}
+.showbox .light_ani {
+    width: 3rem;
+    background-color: #333;
+    transition: all 1s;
+}
+.handle_record .note_ani {
+    width: 15rem;
+    background-color: rgb(53, 117, 105);
+    transition: all 1s;
+}
+.showbox .note_btn {
+    cursor: pointer;
+}
+.showbox .ani,
+.handle_record .ani {
+    box-sizing: content-box;
+    margin-left: 0.5rem;
+    display: inline-block;
+    height: 2.2rem;
+    box-sizing: content-box;
+    border-radius: .32rem 0 0 .32rem;
+    vertical-align: text-bottom;
+}
+.handle_record .ani {
+    margin-left: 3.538rem;
+}
+.handle_record .note_btn {
+    margin-left: 7.15rem;
+    box-sizing: content-box;
+    padding-left: 0.25rem;
+}
+.showbox .describe {
+    text-align: left;
+    padding-right: 3rem;
+    width: 3.25rem;
+    margin-left: 3rem;
+    position: sticky;
+    vertical-align: bottom;
+    padding: .3125rem;
+    height: 2.5rem;
+    box-sizing: content-box;
+    display: inline-block;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+@keyframes rotate {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes water {
+    0% {
+        transform: translate(6.25rem,12.5rem);
+    }
+    100% {
+        transform: translate(31.25rem,31.25rem);
+    }
+}
+.moni_box {
+    float: left;
+    width: 100%;
+    display: none;
+    position: relative;
+    width: 1.875rem;
+    height: 25rem;
+    background-color: #555;
+    z-index: 1;
+    margin-left: 29.15rem;
+    margin-top: 5rem;
+    transform-style: preserve-3d;
+    animation: rotate 6s linear infinite;
+}
+.moni_box .divs {
+    position: absolute;
+    width: 100%;
+    height: 1.875rem;
+    top: 0;
+    background-color: rgb(77, 77, 200);
+}
+.moni_con {
+    float: left;
+    margin-top: 32rem;
+    display: none;
+    margin-left: -15rem;
+}
+.moni_con .val_con_moni {
+    color: #555;
+    width: 8rem;
+    height: 1.5rem;
+    text-indent: .3125rem;
+    display: inline-block;
+    border-radius: .125rem;
+    background-color: #eeffffee;
+    border: .125rem solid rgba(0,0,0,.5);
+    margin-left: 0rem;
+    vertical-align: middle;
+}
+.moni_con .btn_con_moni {
+    margin-left: 0rem;
+    display: inline-block;
+    height: 2rem;
+    margin-top:-0.2rem ;
+    background-color: rgb(27, 130, 171);
+}
+.moni_box div:nth-child(1) {
+    transform: rotateY(360deg) translateZ(9.375rem);
+}
+.moni_box div:nth-child(2) {
+    transform: rotateY(120deg) translateZ(9.375rem);
+}
+.moni_box div:nth-child(3) {
+    transform: rotateY(240deg) translateZ(9.375rem);
+}
+footer {
+    float: left;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12.5rem;
+    margin-top: 10rem;
+    background-color: #2E3A35;
+    color: #fff;
+    position: relative;
+}
+footer a {
+    color: rgb(150, 200, 230);
+}
+footer h3 {
+    color: #ddd;
+    font-size: 1.2rem;
+}
+footer ul {
+    margin-top: 1em;
+    margin-left: 1rem;
+}
+footer li {
+    margin-top: 0.6rem;
+}
+footer i {
+    display: inline-block;
+    margin-right: .8rem;
+}
+footer .source_link {
+    width: 15rem;
+    position: absolute;
+    top:.94rem;
+    left: 1.5rem;
+}
+footer .tec_link {
+    width: 15rem;
+    position: absolute;
+    top: .94rem;
+    left: 17.5rem;
+}
+footer .member_hs_link {
+    position: absolute;
+    top: .94rem;
+    right: 1.5rem;
+    width: 15rem;
+}
+footer .idea_link {
+    position: absolute;
+    top: .94rem;
+    right: 17.5rem;
+    width: 15rem;
+}

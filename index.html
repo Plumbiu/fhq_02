@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧农业系统</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./icon/demo.css">
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/mqtt.js"></script>
+    <script src="./js/file-saver.js"></script>
+    <script src="./icon/iconfont.js"></script>
+    <script src="./js/style.js"></script>
+    <script src="./js/function.mqtt.js"></script>
+</head>
+<body>
+    <div class="nav clearfix">
+        <div class="remote_status">
+            <i>连接状态</i>
+            <span class="font_status status">未连接</span>
+            <i class="remote">服务器状态</i>
+            <span class="server_status status">下线</span>
+            <i>订阅主题</i>
+            <span class="topic_scribe status">无</span>
+            <i>数据发送</i>
+            <span class="post_data status">未发送</span>
+        </div>
+    </div>
+    <div class="header">
+        <div class="tree">&#xe60b;<i>智慧农业系统</i></div>
+        <div class="group">孵化器实验室二组</div>
+    </div>
+    <div class="time"></div>
+    <div class="box">
+        <div class="panel submit_data panel1">
+            <div>一键浇水</div>
+        </div>
+        <div class="form_submit">
+            <form action="" id="tpl_sumbit">
+                <i>浇水量</i><input type="text" class="water" name="water" autocomplete="off">
+                <i>角度</i><input type="text" class="deg" name="deg" autocomplete="off">
+                <input type="submit" value="确定" class="btn_submit">
+            </form>
+        </div>
+        <div class="panel seach_data panel2">
+            <div>数据显示</div>
+        </div>
+        <div class="showbox">
+            <div class="show show_water">
+                <span class="describe water_describe">浇水量</span>
+                <i class="modle water_modle iconfont" style="color: rgb(179, 227, 255);">&#xe634;</i>
+                <span class="data water_data">?</span>
+                <span class="water_ani ani"></span>
+            </div>
+            <div class="show show_tem">
+                <span class="describe tem_describe">温度</span>
+                <i class="modle tem_modle iconfont" style="color: rgb(255,0,0);">&#xe62e;</i>
+                <span class="data tem_data">?</span>
+                <span class="tem_ani ani"></span>
+            </div>
+            <div class="show show_hum">
+                <span class="describe hum_describe">湿度</span>
+                <i class="modle hum_modle iconfont" style="color: rgb(49, 186, 255);">&#xe605;</i>
+                <span class="data hum_data">?</span>
+                <span class="hum_ani ani"></span>
+            </div>
+            <div class="show show_light">
+                <span class="describe light_describe">光照</span>
+                <i class="modle light_modle iconfont" style="color: rgb(51,51,51);">&#xe6b8;</i>
+                <span class="data light_data">?</span>
+                <span class="light_ani ani"></span>
+            </div>
+        </div>
+        <div class="panel record_panel panel3">
+            <div>数据记录</div>
+        </div>
+        <div class="handle_record">
+            <i class="modle note_btn">&#xeb94;</i>
+            <span class="note_ani ani"></span>
+        </div>
+        <div class="panel moni_data panel4">
+            <div>舵机模拟</div>
+        </div>
+        <div class="moni_box">
+            <div class="one divs">
+                <div class="stream"></div>
+            </div>
+            <div class="two divs">
+                <div class="stream"></div>
+            </div>
+            <div class="three divs">
+                <div class="stream"></div>
+            </div>
+        </div>
+        <div class="moni_con">
+            <input type="text" value="请设置转速°/s" class="val_con_moni">
+            <button class="btn_con_moni">确定</button>
+        </div>
+    </div>
+    <footer>
+        <div class="source_link">
+            <h3>友情链接:</h3>
+            <ul>
+                <li><i>配色网站</i><a href="https://mycolor.space/?hex=%23000000&sub=1" target="blank">ColorSpace</a></li>
+                <li><i>服务平台</i><a href="https://www.aliyun.com/" target="blank">阿里云</a></li>
+                <li><i>字体图标</i><a href="https://www.iconfont.cn/" target="blank">iconfont</a></li>
+            </ul>
+        </div>
+        <div class="tec_link">
+            <h3>技术支持:</h3>
+            <ul>
+                <li><i>MQTT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><a href="https://github.com/mqttjs"
+                        target="blank">mqtt.js</a></li>
+                <li><i>jQuery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><a href="https://github.com/jquery"
+                        target="blank">jquery.js</a></li>
+                <li><i>物联网平台&nbsp;</i><a href="https://www.emqx.io/zh" target="blank">EMQX</a></li>
+                <li><i>mqtt.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><a
+                        href="https://www.cnblogs.com/wwjj4811/p/15066915.html" target="blank">mqtt.js文档</a></li>
+            </ul>
+        </div>
+        <div class="member_hs_link">
+            <h3>小组成员</h3>
+            <ul>
+                <li><i>嵌入式</i><a href="javascript:;">郑喆、暨欣怡</a></li>
+                <li><i>硬件&nbsp;&nbsp;&nbsp;</i><a href="javascript:;">程倩</a></li>
+                <li><i>后端&nbsp;&nbsp;&nbsp;</i><a href="javascript:;">王煜祥</a></li>
+                <li><i>前端&nbsp;&nbsp;&nbsp;</i><a href="javascript:;">郭兴俊</a></li>
+            </ul>
+        </div>
+        <div class="idea_link">
+            <h3>组长</h3>
+            <ul>
+                <li><i>网络&nbsp;&nbsp;&nbsp;</i><a href="javascript:;">孙嘉怡</a></li>
+                <li><i>嵌入式</i><a href="javascript:;">朱志伟</a></li>
+                <li><i>硬件&nbsp;&nbsp;&nbsp;</i><a href="javascript:;">凌鑫</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
