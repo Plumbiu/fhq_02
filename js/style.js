@@ -4,10 +4,10 @@ $(function () {
     function showHide() {
         $('.panel1').on('click', () => {
             if($('.form_submit').css('display')==='block') {
-                $('.panel1').css('backgroundColor','rgb(31,155,203)')
+                $('.panel1').css('backgroundColor','rgb(00,150,200)')
             }
             else {
-                $('.panel1').css('backgroundColor','rgb(40,60,100)')
+                $('.panel1').css('backgroundColor','rgb(0,65,210)')
                 console.log(1);
             }
             $('.form_submit').stop().slideToggle()
@@ -15,30 +15,30 @@ $(function () {
 
         $('.panel2').on('click', () => {
             if($('.showbox').css('display')==='block') {
-                $('.panel2').css('backgroundColor','rgb(31,155,203)')
+                $('.panel2').css('backgroundColor','rgb(00,150,200)')
             }
             else {
-                $('.panel2').css('backgroundColor','rgb(40,60,100)')
+                $('.panel2').css('backgroundColor','rgb(0,65,210)')
                 console.log(1);
             }
             $('.showbox').stop().slideToggle()
         })
         $('.panel3').on('click', () => {
             if($('.handle_record').css('display')==='block') {
-                $('.panel3').css('backgroundColor','rgb(31,155,203)')
+                $('.panel3').css('backgroundColor','rgb(00,150,200)')
             }
             else {
-                $('.panel3').css('backgroundColor','rgb(40,60,100)')
+                $('.panel3').css('backgroundColor','rgb(0,65,210)')
                 console.log(1);
             }
             $('.handle_record').stop().slideToggle()
         })
         $('.panel4').on('click', () => {
             if($('.moni_box').css('display')==='block') {
-                $('.panel4').css('backgroundColor','rgb(31,155,203)')
+                $('.panel4').css('backgroundColor','rgb(00,150,200)')
             }
             else {
-                $('.panel4').css('backgroundColor','rgb(40,60,100)')
+                $('.panel4').css('backgroundColor','rgb(0,65,210)')
                 console.log(1);
             }
             $('.moni_box').stop().slideToggle()

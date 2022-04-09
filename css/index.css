@@ -130,7 +130,7 @@ button {
 .box .panel {
     height: 3.2rem;
     width: 100%;
-    background-color: rgb(31,155,203);
+    background-color: rgb(00,150,200);
     border-radius: .625rem;
     color: #fefefe;
     margin-top: 1.5625rem;
@@ -141,7 +141,7 @@ button {
 }
 .box .panel1,
 .box .panel2 {
-    background-color: rgb(40,60,100);
+    background-color: rgb(0,65,210);
 }
 .box .panel div {
     font-size: 2.1875rem;
