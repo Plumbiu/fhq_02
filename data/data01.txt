@@ -1,2 +1,0 @@
-Time:1
-Rotate=-90°、Water=50ml、Light=ON、Temperture=35°C、Humidity=50% 。
