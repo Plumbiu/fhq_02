@@ -213,7 +213,8 @@ button {
 .show_water,
 .show_tem,
 .show_hum,
-.show_light {
+.show_light,
+.show_deg {
     width: 100%;
     overflow: hidden;
     border-radius: 0.5rem 0 0 0.5rem;
@@ -231,6 +232,9 @@ button {
     background-color: rgb(245,245,245);
 }
 .show_light:hover {
+    background-color: rgb(245,245,245);
+}
+.show_deg:hover {
     background-color: rgb(245,245,245);
 }
 .handle_record {
@@ -268,7 +272,8 @@ button {
     display: inline-block;
     vertical-align: middle;
 }
-.showbox .water_ani {
+.showbox .water_ani,
+.showbox .deg_ani {
     width: 5rem;
     background-color: rgb(16,140,190);
     transition: all 1.5s;

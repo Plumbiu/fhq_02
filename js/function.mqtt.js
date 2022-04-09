@@ -138,14 +138,22 @@ $(function () {
         }
         if (topic === 'Water') {
             w_d = message.toString().replace('#', '')
-            while (w_d[0] === '0'&&w_d!=='0') {
-                w_d = w_d.replace(w_d[0], '')
+            w_d=w_d.replace(';',':').split(':')
+            // w_d[1]=water w_d[3]=deg
+            while (w_d[1][0] === '0'&&w_d[1][0]!=='0') {
+                w_d[1] = w_d.replace(w_d[1][0], '')
+            }
+            while (w_d[3][0] === '0'&&w_d[3][0]!=='0') {
+                w_d[3] = w_d.replace(w_d[3][0], '')
             }
             console.log('这是Water主题');
             console.log(w_d)
-            $('.water_ani').css('width', w_d / 35 + 10 + '%').css('background', 'rgb(16,140,' + w_d / 10 + 100 + ')')
-            $('.water_data').html(w_d + 'ml')
-            $('.water_modle').css('color', 'rgb(10,10,' + w_d / 6.5 + ')')
+            $('.water_ani').css('width', w_d[1] / 35 + 10 + '%').css('background', 'rgb(16,140,' + w_d / 10 + 100 + ')')
+            $('.water_data').html(w_d[1] + 'ml')
+            $('.water_modle').css('color', 'rgb(10,10,' + w_d[1] / 6.5 + ')')
+            $('.deg_ani').css('width', w_d[3] / 35 + 10 + '%').css('background', 'rgb(16,140,' + w_d / 10 + 100 + ')')
+            $('.deg_data').html(w_d[3] + '°')
+            $('.deg_modle').css('color', 'rgb(10,10,' + w_d[3] / 6.5 + ')')
         }
         // 文件上传效果
         $('.note_btn').css('color', 'rgb(51,51,51)')
