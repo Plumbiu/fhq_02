@@ -57,7 +57,8 @@ $(function () {
         })
         $('.note_btn').on('click', () => {
             a[a.length] = {
-                Water: w_d,
+                Rotate: w_d[3],
+                Water: w_d[1],
                 Light: msg,
                 Temperture: T,
                 Humidity: H
@@ -70,7 +71,7 @@ $(function () {
             }
             let n = a.length < 10 ? '0' + a.length : a.length
             let Uname = `data${n}.txt`
-            let content = `Time:${a.length}\nWater=${d['Water']}ml、Light=${d['Light']}、Temperture=${d['Temperture']}°C、Humidity=${d['Humidity']}% 。`
+            let content = `Time:${a.length}\nRotate=${d['Rotate']}°、Water=${d['Water']}ml、Light=${d['Light']}、Temperture=${d['Temperture']}°C、Humidity=${d['Humidity']}% 。`
             let blob = new Blob([content], {
                 type: "text/plain;charset=utf-8"
             })
@@ -97,7 +98,7 @@ $(function () {
             $('.post_data').html('已发送').css('color', 'red')
         });
     }
-    let msg, T, H, w_d
+    let msg, T, H, w_d=['?','?','?','?','?']
     //接收到消息触发的回调函数
     client.on('message', (topic, message, packet) => {
         // var msg=JSON.parse(message.toString())
@@ -153,7 +154,7 @@ $(function () {
             $('.water_modle').css('color', 'rgb(10,10,' + w_d[1] / 6.5 + ')')
             $('.deg_ani').css('width', w_d[3] / 35 + 10 + '%').css('background', 'rgb(16,140,' + w_d / 10 + 100 + ')')
             $('.deg_data').html(w_d[3] + '°')
-            $('.deg_modle').css('color', 'rgb(10,10,' + w_d[3] / 6.5 + ')')
+            $('.deg_modle').css('color', 'rgb(20,20,20)')
         }
         // 文件上传效果
         $('.note_btn').css('color', 'rgb(51,51,51)')

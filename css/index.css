@@ -311,6 +311,12 @@ button {
     border-radius: .32rem 0 0 .32rem;
     vertical-align: text-bottom;
 }
+.showbox .deg_ani {
+    background-color: rgb(50,50,50);
+}
+.showbox .deg_modle {
+    font-size: 2.15rem;
+}
 .handle_record .ani {
     margin-left: 3.538rem;
 }
