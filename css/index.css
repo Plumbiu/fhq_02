@@ -208,7 +208,7 @@ button {
     overflow: hidden;
 }
 .show {
-    margin-top: 0rem!important; 
+    margin-top: 0.6rem!important; 
 }
 .show_water,
 .show_tem,
@@ -216,10 +216,22 @@ button {
 .show_light {
     width: 100%;
     overflow: hidden;
-    margin-top: 0.6rem;
+    border-radius: 0.5rem 0 0 0.5rem;
 }
 .show_water {
-    margin-top: 0.8rem;
+    margin-top: 1rem;
+}
+.show_water:hover {
+    background-color: rgb(245,245,245);
+}
+.show_tem:hover {
+    background-color: rgb(245,245,245);
+}
+.show_hum:hover {
+    background-color: rgb(245,245,245);
+}
+.show_light:hover {
+    background-color: rgb(245,245,245);
 }
 .handle_record {
     display: none;
